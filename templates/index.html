@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DreamDest</title>
-    <script src="Travel.js" defer></script>
+    <script src="{{url_for('static', filename='Travel.js')}}" defer></script>
     <style>
         .c-overview-item{
             display: flex;
@@ -84,7 +84,7 @@
                 row-gap: 20px;
             }
             }
-        @media screen and (max-width: 600px) { 
+        @media screen and (max-width: 600px) {
             .Main_container{
                 flex-direction: column;
                 row-gap: 20px;
@@ -111,7 +111,7 @@
     <div class="container-fluid">
         <div style="display: flex; flex-direction: row;  align-items: center;">
             <a class="navbar-brand" href="#" style="text-align: center;">
-            <img style="border: 3px solid rgb(19, 134, 201);" src="IMAGES/plane-solid-full.svg" alt="Logo" width="50" height="45" class="d-inline-block align-text-top">
+            <img style="border: 3px solid rgb(19, 134, 201);" src="{{url_for('static',filename='images/plane-solid-full.svg')}}" alt="Logo" width="50" height="45" class="d-inline-block align-text-top">
             <div style="font-size: 15px; font-weight: bolder;">
             DreamDest
             </a>
@@ -123,18 +123,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#Packages">FAQ</a>
-            </li> 
+                <a class="nav-link active" aria-current="page" href="#FAQ">FAQ</a>
+            </li>
             </ul>
-            <form class="d-flex" role="search">
-                <a href="#booking_form">
-                    <button class="btn btn-outline-primary" type="submit">Book Now</button>
-                </a>
-            </form>
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Packages">Book Now</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
-<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+<div id="hero-carousel" class="carousel slide mb-5" data-bs-ride="carousel">
 <div class="carousel-indicators">
         <button type="button" style="color: white;" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -142,7 +142,7 @@
   </div>
   <div class="carousel-inner c-item">
     <div class="carousel-item active">
-      <img src="IMAGES/carousel_5.jpg" class="d-block w-100 c-img" alt="...">
+      <img src="{{url_for('static', filename='images/carousel_1.jpg')}}" class="d-block w-100 c-img" alt="...">
       <div class="carousel-caption top-0 mt-5">
         <p class="fs-3 text-white mt-5">Make your Travel Endless</p>
         <h1 class="display-1 fw-bolder text-white mt-5">DESTINATE YOUR DREAMS</h1>
@@ -150,7 +150,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="IMAGES/carousel_3.jpg" class="d-block w-100 c-img" alt="...">
+      <img src="{{url_for('static', filename='images/carousel_3.jpg')}}" class="d-block w-100 c-img" alt="...">
       <div class="carousel-caption top-0 mt-5">
         <p class="fs-3 text-white mt-5">Travel to your Dream Destination</p>
         <h1 class="display-1 fw-bolder text-white mt-5">EXPLORE THE WORLD</h1>
@@ -158,7 +158,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="IMAGES/carousel_1.jpg" class="d-block w-100 c-img" alt="...">
+      <img src="{{url_for('static', filename='images/carousel_5.jpg')}}" class="d-block w-100 c-img" alt="...">
       <div class="carousel-caption top-0 mt-5">
         <p class="fs-3 text-white mt-5">Your Passport to Adventure</p>
         <h1 class="display-1 fw-bolder text-white mt-5">JOURNEY INTO EXORDINARY</h1>
@@ -175,11 +175,11 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<section class="mt-4 mx-3 px-3 py-4 c-overview">
+<section class="mt-4 mx-3 px-3 py-4 c-overview mt-5">
     <div class="h-100 d-flex align-items-center">
         <div class="row w-100 text-center c-main_overview d-flex" style="display: flex; justify-content: space-around; vertical-align: center;">
             <div class="col-xl fs-5 c-overview-item">
-                <img src="IMAGES/overview_1.png" alt="passengers" width="130px" height="130px">
+                <img src="{{url_for('static', filename='images/overview_1.png')}}" alt="passengers" width="130px" height="130px">
                 <div class="single_sentence fw-bolder">
                     2500+ Customers
                 </div>
@@ -188,7 +188,7 @@
                 Your next journey could be our next success story! -->
             </div>
             <div class="col-xl fs-5 c-overview-item">
-                <img src="IMAGES/overview_2.png" alt="ratings" width="130px" height="130px">
+                <img src="{{url_for('static', filename='images/overview_2.png')}}" alt="ratings" width="130px" height="130px">
                 <div class="single_sentence fw-bolder">
                     9.4+ Reviews by Customers
                 </div>
@@ -196,7 +196,7 @@
             </div>
             <div class="col-xl fs-5 c-overview-item">
                 <div class="single_sentence fw-bolder">
-                    <img src="IMAGES/overview_3.png" alt="satisfaction" width="130px" height="130px">
+                    <img src="{{url_for('static', filename='images/overview_3.png')}}" alt="satisfaction" width="130px" height="130px">
                     <div class="single_line">
                         100% Satisfaction Guarantee
                     </div>
@@ -206,8 +206,8 @@
         </div>
     </div>
 </section>
-    <section class="Main_container mt-4" id="Packages">
-        <div class="px-4 py-4" style=" padding-left: 20px;  box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9); padding-bottom: 15px; padding-top: 15px; padding-right: 15px;">
+    <section class="Main_container mt-5" id="Packages">
+        <form action="/submit_enquiry" method="post" class="px-4 py-4" style=" padding-left: 20px;  box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9); padding-bottom: 15px; padding-top: 15px; padding-right: 15px;">
             <h1 style="margin-bottom: 40px; 
             color: rgb(185, 185, 241);
             font-family: 'Roboto', sans-serif;
@@ -217,36 +217,37 @@
             font-variation-settings:'wdth' 100;">Enquiry Now</h1>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="name" placeholder="John" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                <input type="text" class="form-control" id="name" name="name"
+                placeholder="John" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                 <label for="name">Name</label>
                 <span id="nameError" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nationality" placeholder="United States" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="United States" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                 <label for="nationality">Nationality</label>
                 <span id="nationalityError" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input type="tel" class="form-control" id="phone" placeholder="00000-00000" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="00000-00000" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                 <label for="phone">Phone Number</label>
                 <span id="phoneError" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                    <input type="email" class="form-control col-md-6" id="email" placeholder="name@example.com" style=" max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                    <input type="email" class="form-control col-md-6" id="email" name="email" placeholder="name@example.com" style=" max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                     <label for="email">Email address</label>
                     <span id="emailError" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="dateOfTravel" placeholder="United States" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                <input type="text" class="form-control" id="dateOfTravel" name="dateOfTravel" placeholder="United States" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                 <label for="dateOfTravel">Date of Travel</label>
                 <span id="dateError" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="cityOfResidence" placeholder="Wick" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
+                <input type="text" class="form-control" id="cityOfResidence" name="cityOfResidence" placeholder="Wick" style="max-width: 400px; background-color: rgb(33, 33, 80); margin-bottom: 5px;">
                 <label for="cityOfResidence">City of Residence</label>
                 <span id="cityError" class="text-danger"></span>
             </div>
-            <select class="form-select form-select-lg " style="background-color: rgb(33, 33, 80); max-width: 400px; color: rgb(185, 185, 241); height: 55px;margin-top: 30px; font-size: 16px;" aria-label="Large select example">
+            <select class="form-select form-select-lg " name="vocationType" style="background-color: rgb(33, 33, 80); max-width: 400px; color: rgb(185, 185, 241); height: 55px;margin-top: 30px; font-size: 16px;" aria-label="Large select example">
                 <option selected>Vocation Type</option>
                 <option value="1">Family Trip</option>
                 <option value="2">Friends Trip</option>
@@ -254,19 +255,19 @@
             </select>
 
             <div class="form-check" style="margin-top: 20px; vertical-align: center;">
-                <input class="form-check-input" type="checkbox" id="check">
+                <input class="form-check-input" type="checkbox" id="check" name="consent">
                 <label class="form-check-label" for="checkDefault" style="line-break: 10px;">
                 By registering your personal information, you agree with the <span class="text-primary"><b>Terms & Conditions</b></span> and <span class="text-primary"><b>Privacy policy</b></span>
                 </label>
                 <span id="checkError" class="text-danger"></span>
             </div>
             <div style="margin-top: 25px; margin-right: 20px; text-align: left; display: flex; flex-direction: row; justify-content: space-between;">
-                <button id="submit" type="button" class="btn btn-outline-primary" style="padding-left: 70px; padding-right: 70px; padding-top: 10px; padding-bottom: 15px;">Submit</button>
+                <button id="submit" type="submit" class="btn btn-outline-primary" style="padding-left: 70px; padding-right: 70px; padding-top: 10px; padding-bottom: 15px;">Submit</button>
                 <button type="button" class="btn btn-outline-primary" style="padding-left: 70px; padding-right: 70px; padding-top: 10px; padding-bottom: 15px;">Cancel</button>
             </div>
-            
-        </div>
-        <div class="g-col-3 px-4 py-2" style="border-radius: 7px; padding-left: 15px ; padding-right: 15px; padding-bottom: 15px; box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
+        </form>
+
+        <div class="g-col-3 px-4 py-2 " style="border-radius: 7px; padding-left: 15px ; padding-right: 15px; padding-bottom: 15px; box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
             <h1 style="
             color: rgb(185, 185, 241);
             margin-bottom: 30px;
@@ -280,59 +281,59 @@
                 'wdth' 100;">Popular Packages</h1>
 
             <div class="Container_main-package" style=" display: flex; flex-direction: column; row-gap: 25px; ">
-                <div class="Container-package">  
+                <div class="Container-package">
                     <div class="container_new_york col-lg" style="box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/wmremove-transformed.png" alt="New York">
+                        <img class="city_img" src="{{url_for('static', filename='images/wmremove-transformed.png')}}" alt="New York">
                         <div class="city_name">New York</div>
                         <div class="location_desc" style=" display: flex; vertical-align: top; flex-direction: row; padding-bottom: 10px; margin-left: 4px; ">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Manhattan | Brooklyn | New Jersey</div>
                         </div>
                         <button class="add">Book Now</button>
                     </div>
                     <div class="container_paris col-lg" style="box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/paris.png" alt="Paris" width="155px">
+                        <img class="city_img" src="{{url_for('static', filename='images/paris.png')}}" alt="Paris" width="155px">
                         <div class="city_name">Paris</div>
                         <div class="location_desc" style="width: 280px; display: flex; vertical-align: top; flex-direction: row; margin-bottom: 10px; margin-left: 4px;">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Arc de Triomphe | Tour Eiffel | Montparnasse</div>
                         </div>
                         <button class="add">Book Now</button>
                     </div>
                     <div class="container_japan col-lg" style=" box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/japan.jpg" alt="Osaka" width="155px">
+                        <img class="city_img" src="{{url_for('static', filename='images/japan.jpg')}}" alt="Osaka" width="155px">
                         <div class="city_name">Osaka</div>
                         <div class="location_desc" style=" display: flex; vertical-align: top; flex-direction: row; margin-bottom: 10px; margin-left: 4px; width: 280px;">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Dojimahama | Imabashi | Yodogawa</div>
                         </div>
                         <button class="add">Book Now</button>
                     </div>
-                </div>    
-                <div class="Container-package">   
+                </div>
+                <div class="Container-package">
                     <div class="container_alaska col-lg" style=" box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/Alaska.jpg" alt="Alaska">
+                        <img class="city_img" src="{{url_for('static', filename='images/Alaska.jpg')}}" alt="Alaska">
                         <div class="city_name">Alaska</div>
                         <div class="location_desc" style=" display: flex; vertical-align: top; flex-direction: row; padding-bottom: 10px; margin-left: 4px;">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Juneau | Ketchikan | Anchorage</div>
                         </div>
                         <button class="add">Book Now</button>
                     </div>
                     <div class="container_australia col-lg" style=" box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/Australia.jpg" alt="Australia" width="155px">
+                        <img class="city_img" src="{{url_for('static', filename='images/Australia.jpg')}}" alt="Australia" width="155px">
                         <div class="city_name">Australia</div>
                         <div class="location_desc" style=" display: flex; vertical-align: top; flex-direction: row; margin-bottom: 10px; margin-left: 4px;">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Tasmania | Sydney | Melbourne</div>
                         </div>
                         <button class="add">Book Now</button>
                     </div>
                     <div class="container_switzerland col-lg" style=" box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-                        <img class="city_img" src="IMAGES/Swizz.jpg" alt="Switzerland" width="155px">
+                        <img class="city_img" src="{{url_for('static', filename='images/Swizz.jpg')}}" alt="Switzerland" width="155px">
                         <div class="city_name">Switzerland</div>
                         <div class="location_desc" style=" display: flex; vertical-align: top; flex-direction: row; margin-bottom: 10px; margin-left: 4px;">
-                            <img src="IMAGES/map-pin (1).svg" style="color: gray; ">
+                            <img src="{{url_for('static', filename='images/map-pin (1).svg')}}" style="color: gray; ">
                             <div class="friends">Geneva | Zurich | Interlaken</div>
                         </div>
                         <button class="add">Book Now</button>
@@ -342,52 +343,99 @@
         </div>
     </section>
     </section> 
-    <section class="px-4 py-3 mt-5" id="FAQ" style="box-shadow: 0px 0px 12px rgba(2, 86, 196, 0.9);">
-        <h2 class="mb-4">FAQ</h2>
-        <div class="accordion" id="accordionExample">
-  <div class="accordion-item mt-3">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        What services does your travel agency offer?
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-         We offer complete travel solutions, including flight bookings, hotel reservations, holiday packages, visa assistance, and travel insurance
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item’s accordion body.</strong>We offer complete travel solutions, including flight bookings, hotel reservations, holiday packages, visa assistance, and travel insurance
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
+    <section class="px-4 py-5 mt-5 my-5 mx-3" id="FAQ">
+        <h2 class="mb-4 text-center">FAQ</h2>
+        <div class="container">
+            <div class="accordion" id="accordionExample" style=".accordion:focus{outline:none;}">
+                <div class="accordion-item mt-3 c-faq1" style=".c-faq1:focus{outline:none;}">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What services does your travel agency offer?
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We offer complete travel solutions, including flight bookings, hotel reservations, holiday packages, visa assistance, and travel insurance
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Can I cancel or reschedule my booking?
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Yes, you can cancel or modify your booking easily. Cancellation policies may vary by package.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What should I do in case of an emergency during travel?
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                       You can contact our 24/7 support team through phone or WhatsApp for immediate help.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
     </div>
 </div>
-<footer class="bg-dark text-white text-center py-3">
+</div>
+<footer class="bg-black text-white text-center py-3 px-3 mt-5" id="FAQ">
   <div class="container">
+    <p class="display-5 mb-3 mt-3">DreamDest</p>
     <p class="mb-0">&copy; 2025 Your Company, Inc. All rights reserved.</p>
+    <div class="my-4" style="display:flex; justify-content:space-around; flex-wrap:wrap; max-width:1100px; margin:auto;">
+
+    <div style="flex:1; min-width:250px; margin:10px;">
+      <h3 style="color:#f4d35e;">About Us</h3>
+      <p style="line-height:1.6;">
+        Explore the world with <strong>DreamDest Travels</strong>!
+        We provide customized travel packages, hotel bookings, 
+        and memorable vacation experiences for all explorers.
+      </p>
+    </div>
+
+    <div style="flex:1; min-width:200px; margin:10px;">
+      <h3 style="color:#f4d35e;">Quick Links</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li><a href="/destinations" style="color:#fff; text-decoration:none;">Destinations</a></li>
+        <li><a href="/packages" style="color:#fff; text-decoration:none;">Packages</a></li>
+        <li><a href="/contact" style="color:#fff; text-decoration:none;">Contact</a></li>
+        <li><a href="/faq" style="color:#fff; text-decoration:none;">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div style="flex:1; min-width:250px; margin:10px;">
+      <h3 style="color:#f4d35e;">Contact Us</h3>
+      <p>Email: support@dreamdest.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Beach Road, Goa, India</p>
+    </div>
+
+    <div style="flex:1; min-width:200px; margin:10px;">
+      <h3 style="color:#f4d35e;">Follow Us</h3>
+      <a href="#" style="color:#fff; margin-right:10px; text-decoration:none;">Facebook</a><br>
+      <a href="#" style="color:#fff; margin-right:10px; text-decoration:none;">Instagram</a><br>
+      <a href="#" style="color:#fff; margin-right:10px; text-decoration:none;">Twitter</a><br>
+      <a href="#" style="color:#fff; margin-right:10px; text-decoration:none;">YouTube</a>
+    </div>
+
+  </div>
+
+  <hr style="margin:30px auto; width:80%; border:1px solid #f4d35e;">
+
+  <p style="text-align:center; font-size:14px; color:#ccc;">
+    © 2025 DreamDest Travels. All Rights Reserved. | Designed by The Crew
+  </p>
   </div>
 </footer>
 </body>
